@@ -202,3 +202,16 @@ h3 {
 p{
   font-family: 'Times New Roman', Times, serif;
 }
+
+
+
+.Stats{
+  align-content: center;
+  align-self: center;
+  border: solid 2px black;
+  align-items:center ;
+  text-align: center;
+  max-width: 250px;
+  border-radius: 30px;
+  
+}

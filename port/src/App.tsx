@@ -1,14 +1,26 @@
-import MyNavbar from "./components/navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MyNavbar from "./components/Navbar";
 import ProjectPage from "./components/projects";
 import Footer from "./components/Footer";
+import Githubstats from "./components/Githubstats";
+
+function Home() {
+  return (
+    <>
+      <Footer />
+    </>
+  );
+}
 
 function App() {
   return (
-    <div>
-      <MyNavbar></MyNavbar>
-      <ProjectPage></ProjectPage>
-      <Footer></Footer>
-    </div>
+    <BrowserRouter>
+      <MyNavbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<ProjectPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

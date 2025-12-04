@@ -21,7 +21,7 @@ function ProjectPage({}) {
       description:
         "Along with 3 other team members, built a web application tailored to users who love exploring new anime. Yomiru provides users with anime suggestions that tailor to their interests so they can explore new series. ",
       tags: ["Web", "SDLC"],
-      tech: ["github1", "js"],
+      tech: ["html-5", "js", "css-3"],
       collab: ["Karan", "Eric", "Jassie"],
     },
     {
@@ -31,7 +31,7 @@ function ProjectPage({}) {
       description:
         "AI therapist using computer vision and gemini AI api calls along side elevenlabs voice playback to create a live therapy experience",
       tags: ["Web", "Psyc", "AI", "Hackathon"],
-      tech: ["python", "ai"],
+      tech: ["python", "programing"],
       collab: ["Charan", "Clark", "Quang"],
     },
     {
@@ -41,7 +41,7 @@ function ProjectPage({}) {
       description:
         "F1 Stock Match is a fast-paced hackathon project developed in under 9 hours. The goal of the project was to creatively combine real-world stock market data with the world of Formula 1 racing, generating an interactive experience where users can explore which teams are “performing” like specific stocks. ",
       tags: ["Web", "Hackathon"],
-      tech: ["typescript", "react"],
+      tech: ["html-5", "js", "css-3"],
       collab: ["Charan", "Clark", "Quang"],
     },
     {
@@ -50,7 +50,7 @@ function ProjectPage({}) {
       title: "Portfolio Site ",
       description: "This is my first project",
       tags: ["Web"],
-      tech: ["typescript", "react"],
+      tech: ["typescript", "programing"],
       collab: [],
     },
     {
@@ -111,11 +111,11 @@ function ProjectPage({}) {
           <Thumbnail video={project} />
           <div className="project-link">
             <a href={project.url}>
-              <img className="icons" src="src\assets\github1.png"></img>
+              <img className="icons" src="/src/assets/github1.png" alt="github" />
             </a>
 
             <a href={project.web}>
-              <img className="icons" src="src\assets\internet.png"></img>
+              <img className="icons" src="/src/assets/internet.png" alt="website" />
             </a>
             <h3>{project.title}</h3>
           </div>
@@ -137,7 +137,7 @@ function ProjectPage({}) {
               <img
                 className="Tech"
                 key={TechIndex}
-                src={`src/assets/${Tech}.png`}
+                src={`/src/assets/${Tech}.png`}
                 alt={Tech}
                 style={{ height: "32px", marginRight: "8px" }}
               />
@@ -151,7 +151,7 @@ function ProjectPage({}) {
               <img
                 className=""
                 key={CollaboratorsIndex}
-                src={`src/assets/${collab}.png`}
+                src={`/src/assets/${collab}.png`}
                 alt={collab}
                 style={{ height: "32px", marginRight: "8px" }}
               />
