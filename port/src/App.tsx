@@ -1,4 +1,4 @@
-import MyNavbar from "./components/Navbar";
+import MyNavbar from "./components/navbar";
 import ProjectPage from "./components/projects";
 import Footer from "./components/Footer";
 

@@ -21,7 +21,7 @@ function ProjectPage({}) {
       description:
         "Along with 3 other team members, built a web application tailored to users who love exploring new anime. Yomiru provides users with anime suggestions that tailor to their interests so they can explore new series. ",
       tags: ["Web", "SDLC"],
-      tech: ["github1", "react"],
+      tech: ["github1", "js"],
       collab: ["Karan", "Eric", "Jassie"],
     },
     {
