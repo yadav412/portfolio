@@ -1,10 +1,10 @@
-import { Fragment, use, useState } from "react";
+import { Fragment, useState } from "react";
 import type { MouseEvent } from "react";
 
 function Projects() {
   let hackathons = ["Luxbot - Stormhacks 2025", "F1 stocks - Fall Hacks 2025"];
 
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [selectedIndex] = useState(-1);
   const projects = [
     "Yomiru",
     "Social Media & Mood",
@@ -18,26 +18,25 @@ function Projects() {
     <Fragment>
       <h1>Projects</h1>
       <ul className="list-group">
-        {projects.map((projects, index) => (
-          <li className="list-group-item" key={projects} onClick={handleClick}>
-            {projects}
+        {projects.map((project) => (
+          <li className="list-group-item" key={project} onClick={handleClick}>
+            {project}
           </li>
         ))}
       </ul>
 
       <h1>Hackathons</h1>
       <ul className="list-group">
-        {hackathons.map((hackathons, index) => (
+        {hackathons.map((hackathon) => (
           <li
             className={
-              selectedIndex === index
+              selectedIndex === hackathons.indexOf(hackathon)
                 ? "list-group-item active"
                 : "list-group-item"
             }
+            key={hackathon}
           >
-            {hackathons}
-            key={projects} onClick={selectedIndex}
-            {projects}
+            {hackathon}
           </li>
         ))}
       </ul>

@@ -1,6 +1,4 @@
-import MyNavbar from "./components/navbar";
-
-//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MyNavbar from "./components/navbar.tsx";
 import ProjectPage from "./components/projects";
 import Footer from "./components/Footer";
 
