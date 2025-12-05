@@ -11,6 +11,17 @@ function Thumbnail({
 }
 
 function ProjectPage({}) {
+  // import all assets from ../assets as URLs so Vite bundles them for production
+  const assets: Record<string, string> = import.meta.glob(
+    "../assets/*.{png,jpg,jpeg,svg}",
+    { as: "url", eager: true }
+  ) as Record<string, string>;
+
+  const getAsset = (name: string) => {
+    const key1 = `../assets/${name}`;
+    // Some bundlers include leading ./ in keys; try both
+    return assets[key1] ?? assets[`./${key1}`] ?? null;
+  };
   const TopTags = ["Web", "Psyc", "AI", "Hackathon", "Extension", "SDLC"];
 
   const projects = [
@@ -111,11 +122,23 @@ function ProjectPage({}) {
           <Thumbnail video={project} />
           <div className="project-link">
             <a href={project.url}>
-              <img className="icons" src="/src/assets/github1.png" alt="github" />
+              {getAsset("github1.png") ? (
+                <img
+                  className="icons"
+                  src={getAsset("github1.png")!}
+                  alt="github"
+                />
+              ) : null}
             </a>
 
             <a href={project.web}>
-              <img className="icons" src="/src/assets/internet.png" alt="website" />
+              {getAsset("internet.png") ? (
+                <img
+                  className="icons"
+                  src={getAsset("internet.png")!}
+                  alt="website"
+                />
+              ) : null}
             </a>
             <h3>{project.title}</h3>
           </div>
@@ -133,29 +156,35 @@ function ProjectPage({}) {
           <h4 className="headings">Tech Stack</h4>
 
           <div className="icons">
-            {project.tech.map((Tech: string, TechIndex) => (
-              <img
-                className="Tech"
-                key={TechIndex}
-                src={`/src/assets/${Tech}.png`}
-                alt={Tech}
-                style={{ height: "32px", marginRight: "8px" }}
-              />
-            ))}
+            {project.tech.map((Tech: string, TechIndex) => {
+              const url = getAsset(`${Tech}.png`);
+              return url ? (
+                <img
+                  className="Tech"
+                  key={TechIndex}
+                  src={url}
+                  alt={Tech}
+                  style={{ height: "32px", marginRight: "8px" }}
+                />
+              ) : null;
+            })}
           </div>
 
           <h4 className="headings">Collaborators</h4>
 
           <div className="icons">
-            {project.collab.map((collab: string, CollaboratorsIndex) => (
-              <img
-                className=""
-                key={CollaboratorsIndex}
-                src={`/src/assets/${collab}.png`}
-                alt={collab}
-                style={{ height: "32px", marginRight: "8px" }}
-              />
-            ))}
+            {project.collab.map((collab: string, CollaboratorsIndex) => {
+              const url = getAsset(`${collab}.png`);
+              return url ? (
+                <img
+                  className=""
+                  key={CollaboratorsIndex}
+                  src={url}
+                  alt={collab}
+                  style={{ height: "32px", marginRight: "8px" }}
+                />
+              ) : null;
+            })}
           </div>
         </div>
       ))}
