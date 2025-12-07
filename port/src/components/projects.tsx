@@ -56,7 +56,7 @@ function ProjectPage({}) {
         "Along with 3 other team members, built a web application tailored to users who love exploring new anime. Yomiru provides users with anime suggestions that tailor to their interests so they can explore new series. ",
       tags: ["Web", "SDLC"],
       tech: ["html-5", "js", "css-3"],
-      collab: ["Karan", "Eric", "Jassie"],
+      collab: ["karan", "eric", "jassie"],
       show: "yomiru poster.png",
     },
     {
@@ -119,7 +119,7 @@ function ProjectPage({}) {
       web: "",
       title: "SFU Esports Discord Bot",
       description:
-        "Developed a discord bot for the SFU esports association for the sole purpose of automating the ticketing process related to Event logistics.",
+        "Developed a discord bot for the SFU esports association for the sole purpose of automating the ticketing process related to Event logistics. This project was trailed with 50+ users before being shelved due to organisations personal changes.",
       tags: ["Extension"],
       tech: ["discord", "js"],
       collab: [],
@@ -140,6 +140,17 @@ function ProjectPage({}) {
 
   return (
     <div className="project-card">
+      <span
+        className="callingcardcontainter"
+        style={{ textAlign: "center", alignItems: "center" }}
+      >
+        <h1
+          className="callingcard"
+          style={{ textAlign: "center", alignItems: "center" }}
+        >
+          Nervy Starts, Strategies and Redbull
+        </h1>
+      </span>
       <p
         className="title"
         style={{ textAlign: "center", alignItems: "center" }}
