@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 function MyNavbar() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
+    <Navbar expand="lg" className={`bg-body-tertiary `}>
+      <Container className="nav">
         <Navbar.Brand as={Link} to="/"></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

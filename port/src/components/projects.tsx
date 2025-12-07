@@ -19,7 +19,6 @@ function ProjectPage({}) {
 
   const getAsset = (name: string) => {
     const key1 = `../assets/${name}`;
-    // Some bundlers include leading ./ in keys; try both
     return assets[key1] ?? assets[`./${key1}`] ?? null;
   };
   const TopTags = ["Web", "Psyc", "AI", "Hackathon", "Extension", "SDLC"];
@@ -61,7 +60,7 @@ function ProjectPage({}) {
       title: "Portfolio Site ",
       description: "This is my first project",
       tags: ["Web"],
-      tech: ["typescript", "programing"],
+      tech: ["typescript", "programing", "java", "SpringBoot"],
       collab: [],
     },
     {

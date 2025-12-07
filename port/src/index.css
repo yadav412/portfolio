@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(0, 56, 28, 0.87);
   background-color: #242424;
 
   font-synthesis: none;
@@ -60,7 +60,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #26865b;
   }
   button {
     background-color: #f9f9f9;
@@ -68,13 +68,53 @@ button:focus-visible {
 }
 
 .Organizations .dropdown-toggle:hover {
-  color: #535bf2 !important;
+  color: #27753d !important;
+}
+.basic-nav-dropdown{
+  background-color:#27753d ;
 }
 
-.bg-body-tertiary{
+.navbar.bg-body-tertiary,
+.bg-body-tertiary.navbar{
   min-width: 100vw;
+  background-color: #00000052;
   
 }
+
+/* Navbar base and scrolled state */
+.bg-body-tertiary{
+  transition: background 300ms ease, box-shadow 300ms ease;
+  /* solid navbar color */
+  background: #1b6ca8;
+}
+
+.bg-body-tertiary .nav-link{
+  color: #000000;
+  transition: color 200ms ease;
+}
+
+.bg-body-tertiary.navbar-scrolled{
+  /* slightly darker gradient when scrolled */
+  background: linear-gradient(90deg,#0f2a44 0%, #153a62 60%, #0f2340 100%);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.bg-body-tertiary.navbar-scrolled .nav-link{
+  color: #212121;
+}
+
+/* Stronger selectors to override Bootstrap defaults (Bootstrap loads after this file) */
+.navbar.bg-body-tertiary{
+  background: #3d5b2c !important;
+}
+.navbar.bg-body-tertiary .nav-link{
+  color: #000000 !important;
+}
+.navbar.bg-body-tertiary.navbar-scrolled{
+  background: linear-gradient(90deg,#0f2a44 0%, #153a62 60%, #0f2340 100%) !important;
+}
+
+
 
 /* Project component styles */
 .title {
@@ -84,6 +124,7 @@ button:focus-visible {
   font-family: 'Courier New', Courier, monospace;
   align-items: center;
   align-self: center;
+  color: #ffffff;
 
 }
 
@@ -115,10 +156,13 @@ h3 {
   text-decoration: none;
 }
 
-.project-link:hover h3,
-.project-link:hover p {
-  color: #646cff;
+/* Ensure project titles are white for contrast */
+.project-link h3,
+.project-item h3 {
+  color: #ffffff;
 }
+
+
 
 .project-card{
   /* ensure no duplicate narrower styling - keep same full-width rules above */
@@ -130,17 +174,18 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem 1.25rem;
-  background-color: #21354793;
+  background-color: #000000c4;
 
 }
 .tag{
   border: solid 2px rgba(0, 0, 0, 0.329);
-  background-color: #2147444f;
+  background-color: #43ce334f;
   border-radius: 40px;
   padding: 0.5rem 1rem;
   margin: 0.2rem 0.4rem 0.2rem 0;
   display: inline-block;
   font-family: 'Times New Roman', Times, serif;
+  color: #1a1a1a;
 }
 
 
@@ -151,11 +196,13 @@ h3 {
 }
 
 .project-item {
-  border: 3px solid #00d9ff;
+  border: 3px solid #66ff0090;
+  box-shadow: #1a1a1a;
+
   border-radius: 30px;
   padding: 1rem;
   margin: 0;
-  background-color: #d3d3d379;
+  background-color: #39563955;
   width: 100%;
   max-width: none;
   display: flex;
@@ -168,11 +215,13 @@ h3 {
 .headings{
   font-size: medium;
   font-family: 'Courier New', Courier, monospace;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 
 .thumbnail {
-  border: 1px solid rgb(0, 153, 255) ;
+  border: 1px solid rgb(0, 0, 0) ;
   border-radius: 60px;
   padding: 1rem;
   margin: 1rem auto;
@@ -209,6 +258,7 @@ h3 {
 
 p{
   font-family: 'Times New Roman', Times, serif;
+  color: #ffffff;
 }
 
 
