@@ -540,3 +540,16 @@ p{
     font-size: 1.2rem;
   }
 }
+
+
+.UX{
+  color: #000;
+}
+
+.home{
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background-color: #000000c4;
+}

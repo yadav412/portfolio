@@ -7,10 +7,13 @@ import Chatbot from "./components/Chatbot";
 
 function Home() {
   return (
-    <>
+    <div className="home">
+      <div className="opening">
+        <p className="UX"></p>
+      </div>
       <Chatbot></Chatbot>
-      <Footer />
-    </>
+      <Footer></Footer>
+    </div>
   );
 }
 
@@ -19,7 +22,7 @@ function App() {
     <BrowserRouter>
       <MyNavbar />
       <Routes>
-        <Route path="/App" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/projects" element={<ProjectPage />} />
       </Routes>
     </BrowserRouter>
