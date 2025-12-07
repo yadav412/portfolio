@@ -7,20 +7,28 @@ function Thumbnail({
 }) {
   return (
     <div className="thumbnail">
-        {video.url ? (
-          <img
-            src={video.url}
-            alt={video.title}
-            loading="lazy"
-            tabIndex={0}
-            onClick={() => window.open(video.url, "_blank")}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") window.open(video.url, "_blank");
-            }}
-          />
-        ) : (
-          <div style={{ width: '100%', height: '140px', background: '#00000022', borderRadius: 12 }} />
-        )}
+      {video.url ? (
+        <img
+          src={video.url}
+          alt={video.title}
+          loading="lazy"
+          tabIndex={0}
+          onClick={() => window.open(video.url, "_blank")}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ")
+              window.open(video.url, "_blank");
+          }}
+        />
+      ) : (
+        <div
+          style={{
+            width: "100%",
+            height: "140px",
+            background: "#00000022",
+            borderRadius: 12,
+          }}
+        />
+      )}
     </div>
   );
 }
@@ -89,7 +97,7 @@ function ProjectPage({}) {
       description:
         " Designed and executed an experimental study on emotional valence in social media content using PANAS to assess mood changes. Conducted statistical analysis using Python scripting; produced a formal APA-style lab report using data processed through a custom Python script increasing result accuracy. ",
       tags: ["Psyc", "Research", "Data Analysis"],
-      tech: ["python", "pandas"],
+      tech: ["python", "pandas", "research"],
       collab: [],
       show: "mood.png",
     },
