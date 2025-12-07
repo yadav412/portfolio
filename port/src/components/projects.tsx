@@ -35,6 +35,7 @@ function ProjectPage({}) {
       tags: ["Web", "SDLC"],
       tech: ["html-5", "js", "css-3"],
       collab: ["Karan", "Eric", "Jassie"],
+      show: "yomiru poster.png",
     },
     {
       url: "https://github.com/yadav412/LuxBot",
@@ -45,6 +46,7 @@ function ProjectPage({}) {
       tags: ["Web", "Psyc", "AI", "Hackathon"],
       tech: ["python", "programing"],
       collab: ["Charan", "Clark", "Quang"],
+      show: "luxbot.png",
     },
     {
       url: "https://github.com/yadav412/CSSS_Fall_Hacks2025",
@@ -55,6 +57,7 @@ function ProjectPage({}) {
       tags: ["Web", "Hackathon"],
       tech: ["html-5", "js", "css-3"],
       collab: ["Charan", "Clark", "Quang"],
+      show: "f1stocks.png",
     },
     {
       url: "#",
@@ -64,6 +67,7 @@ function ProjectPage({}) {
       tags: ["Web"],
       tech: ["typescript", "programing", "java", "SpringBoot"],
       collab: [],
+      show: "yomiru poster.png",
     },
     {
       url: "https://github.com/yadav412/psyc-data-analysis",
@@ -74,6 +78,7 @@ function ProjectPage({}) {
       tags: ["Psyc", "Research", "Data Analysis"],
       tech: ["python", "pandas"],
       collab: [],
+      show: "mood.png",
     },
     {
       url: "#",
@@ -82,8 +87,9 @@ function ProjectPage({}) {
       description:
         "Developed a discord bot for the SFU esports association for the sole purpose of automating the ticketing process related to Event logistics.",
       tags: ["Extension"],
-      tech: ["discord", "nodejs"],
+      tech: ["discord", "js"],
       collab: [],
+      show: "yomiru poster.png",
     },
     {
       url: "#",
@@ -93,6 +99,7 @@ function ProjectPage({}) {
       tags: ["Psyc", "Research"],
       tech: ["python", "research"],
       collab: [""],
+      show: "yomiru poster.png",
     },
     {
       url: "#",
@@ -102,6 +109,7 @@ function ProjectPage({}) {
       tags: ["", "", ""],
       tech: ["typescript", "react"],
       collab: [""],
+      show: "yomiru poster.png",
     },
   ];
 
@@ -120,7 +128,16 @@ function ProjectPage({}) {
 
       {projects.map((project, index) => (
         <div key={index} className="project-item">
-          <Thumbnail video={project} />
+          <a href={project.web}>
+            {project.show && getAsset(project.show) ? (
+              <img
+                className="thumbnail"
+                src={getAsset(project.show)!}
+                alt="poster"
+              />
+            ) : null}
+          </a>
+
           <div className="project-link">
             <a href={project.url}>
               {getAsset("github1.png") ? (
