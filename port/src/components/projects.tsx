@@ -59,11 +59,22 @@ function ProjectPage({}) {
       show: "yomiru poster.png",
     },
     {
+      url: "#",
+      web: "",
+      title: "Portfolio Site ",
+      description:
+        "Personal portfolio site that is a reflection of my current web development skills.\n Version one : This was my first time using both HTML and CSS it was really unpolished.(2024) \n Version two : This is the current version of my personal website, it is a lot more polished and has a lot more features.(2025)",
+      tags: ["Web"],
+      tech: ["typescript", "programing", "java", "SpringBoot"],
+      collab: [],
+      show: "yomiru poster.png",
+    },
+    {
       url: "https://github.com/yadav412/LuxBot",
       web: "",
       title: "Luxbot ",
       description:
-        "AI therapist using computer vision and gemini AI api calls along side elevenlabs voice playback to create a live therapy experience",
+        "An AI-powered wellness assistant that uses computer vision, Gemini API calls, and ElevenLabs voice playback to create a responsive, real-time conversational experience. It interprets facial expressions and non-verbal cues to tailor its responses, while ElevenLabs generates natural voice output for a more immersive interaction.",
       tags: ["Web", "Psyc", "AI", "Hackathon"],
       tech: ["python", "programing"],
       collab: ["Charan", "Clark", "Quang"],
@@ -80,16 +91,7 @@ function ProjectPage({}) {
       collab: ["Charan", "Clark", "Quang"],
       show: "f1stocks.png",
     },
-    {
-      url: "#",
-      web: "",
-      title: "Portfolio Site ",
-      description: "This is my first project",
-      tags: ["Web"],
-      tech: ["typescript", "programing", "java", "SpringBoot"],
-      collab: [],
-      show: "yomiru poster.png",
-    },
+
     {
       url: "https://github.com/yadav412/psyc-data-analysis",
       web: "",
@@ -104,6 +106,16 @@ function ProjectPage({}) {
     {
       url: "#",
       web: "",
+      title: "Neural decay and technology use research",
+      description: "This is my first project",
+      tags: ["Psyc", "Research"],
+      tech: ["python", "pandas", "research"],
+      collab: [""],
+      show: "yomiru poster.png",
+    },
+    {
+      url: "#",
+      web: "",
       title: "SFU Esports Discord Bot",
       description:
         "Developed a discord bot for the SFU esports association for the sole purpose of automating the ticketing process related to Event logistics.",
@@ -112,16 +124,7 @@ function ProjectPage({}) {
       collab: [],
       show: "yomiru poster.png",
     },
-    {
-      url: "#",
-      web: "",
-      title: "Neural decay and technology use research",
-      description: "This is my first project",
-      tags: ["Psyc", "Research"],
-      tech: ["python", "research"],
-      collab: [""],
-      show: "yomiru poster.png",
-    },
+
     {
       url: "#",
       web: "",
@@ -163,7 +166,7 @@ function ProjectPage({}) {
             <a href={project.url}>
               {getAsset("github1.png") ? (
                 <img
-                  className="icons"
+                  className="icons2"
                   src={getAsset("github1.png")!}
                   alt="github"
                 />
@@ -173,7 +176,7 @@ function ProjectPage({}) {
             <a href={project.web}>
               {getAsset("internet.png") ? (
                 <img
-                  className="icons"
+                  className="icons2"
                   src={getAsset("internet.png")!}
                   alt="website"
                 />
@@ -190,7 +193,7 @@ function ProjectPage({}) {
             ))}
           </p>
 
-          <p>{project.description}</p>
+          <p className="des">{project.description}</p>
 
           <h4 className="headings">Tech Stack</h4>
 

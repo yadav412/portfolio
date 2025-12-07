@@ -246,6 +246,10 @@ h3 {
   color: #1a1a1a;
 }
 
+.des{
+  white-space: pre-line;
+}
+
 /* Optional text glow animation */
 @keyframes pulse-glow {
   0% { text-shadow: 0 0 5px rgba(114,233,114,0); }
@@ -277,8 +281,13 @@ h3 {
   display: inline-block;
   margin: 0.5rem;
 }
+.icons2{
+  height: 30px;
+  display: inline-block;
+  margin: 0.5rem;
+}
 
-.icons:hover{
+.icons2:hover{
   transform: scale(1.2);
 }
 
