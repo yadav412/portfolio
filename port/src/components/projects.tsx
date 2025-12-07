@@ -1,4 +1,5 @@
 import Chatbot from "./Chatbot";
+import Footer from "./Footer";
 
 function Thumbnail({
   video,
@@ -106,12 +107,12 @@ function ProjectPage({}) {
     {
       url: "#",
       web: "",
-      title: "Neural decay and technology use research",
+      title: "Neural decay and tech use- Research Study",
       description: "This is my first project",
       tags: ["Psyc", "Research"],
       tech: ["python", "pandas", "research"],
       collab: [""],
-      show: "yomiru poster.png",
+      show: "brain.png",
     },
     {
       url: "#",
