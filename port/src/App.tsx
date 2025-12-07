@@ -3,10 +3,12 @@ import MyNavbar from "./components/Navbar";
 import ProjectPage from "./components/projects";
 import Footer from "./components/Footer";
 import Githubstats from "./components/Githubstats";
+import Chatbot from "./components/Chatbot";
 
 function Home() {
   return (
     <>
+      <Chatbot></Chatbot>
       <Footer />
     </>
   );
@@ -17,7 +19,7 @@ function App() {
     <BrowserRouter>
       <MyNavbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/App" element={<Home />} />
         <Route path="/projects" element={<ProjectPage />} />
       </Routes>
     </BrowserRouter>

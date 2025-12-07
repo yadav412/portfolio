@@ -1,3 +1,5 @@
+import Chatbot from "./Chatbot";
+
 function Thumbnail({
   video,
 }: {
@@ -13,7 +15,7 @@ function Thumbnail({
 function ProjectPage({}) {
   // import all assets from ../assets as URLs so Vite bundles them for production
   const assets: Record<string, string> = import.meta.glob(
-    "../assets/*.{png,jpg,jpeg,svg}",
+    "../assets/*.{png,jpg,jpeg,svg,webp}",
     { as: "url", eager: true }
   ) as Record<string, string>;
 
@@ -90,7 +92,7 @@ function ProjectPage({}) {
       description: "This is my first project",
       tags: ["Psyc", "Research"],
       tech: ["python", "research"],
-      collab: ["Juno"],
+      collab: [""],
     },
     {
       url: "#",
@@ -187,6 +189,7 @@ function ProjectPage({}) {
           </div>
         </div>
       ))}
+      <Chatbot></Chatbot>
     </div>
   );
 }
