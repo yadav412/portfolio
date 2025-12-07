@@ -7,7 +7,20 @@ function Thumbnail({
 }) {
   return (
     <div className="thumbnail">
-      <img src={video.url} alt={video.title} />
+        {video.url ? (
+          <img
+            src={video.url}
+            alt={video.title}
+            loading="lazy"
+            tabIndex={0}
+            onClick={() => window.open(video.url, "_blank")}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") window.open(video.url, "_blank");
+            }}
+          />
+        ) : (
+          <div style={{ width: '100%', height: '140px', background: '#00000022', borderRadius: 12 }} />
+        )}
     </div>
   );
 }
