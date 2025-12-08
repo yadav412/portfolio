@@ -45,7 +45,15 @@ function ProjectPage({}) {
     const key1 = `../assets/${name}`;
     return assets[key1] ?? assets[`./${key1}`] ?? null;
   };
-  const TopTags = ["Web", "Psyc", "AI", "Hackathon", "Extension", "SDLC"];
+  const TopTags = [
+    "Web",
+    "Psyc",
+    "AI",
+    "Hackathon",
+    "Extension",
+    "SDLC",
+    "Research",
+  ];
 
   const projects = [
     {
@@ -54,10 +62,11 @@ function ProjectPage({}) {
       title: "Yomiru ",
       description:
         "Along with 3 other team members, built a web application tailored to users who love exploring new anime. Yomiru provides users with anime suggestions that tailor to their interests so they can explore new series. ",
-      tags: ["Web", "SDLC"],
+      tags: ["Web", "SDLC", "Live"],
       tech: ["html-5", "js", "css-3"],
       collab: ["karan", "eric", "jassie"],
       show: "yomiru poster.png",
+      live: "online",
     },
     {
       url: "#",
@@ -65,10 +74,11 @@ function ProjectPage({}) {
       title: "Portfolio Site ",
       description:
         "Personal portfolio site that is a reflection of my current web development skills.\n Version one : This was my first time using both HTML and CSS it was really unpolished.(2024) \n Version two : This is the current version of my personal website, it is a lot more polished and has a lot more features.(2025)",
-      tags: ["Web"],
+      tags: ["Web", "Live"],
       tech: ["typescript", "programing", "java", "SpringBoot"],
       collab: [],
-      show: "yomiru poster.png",
+      show: "portfolio.png",
+      live: "online",
     },
     {
       url: "https://github.com/yadav412/LuxBot",
@@ -76,10 +86,11 @@ function ProjectPage({}) {
       title: "Luxbot ",
       description:
         "An AI-powered wellness assistant that uses computer vision, Gemini API calls, and ElevenLabs voice playback to create a responsive, real-time conversational experience. It interprets facial expressions and non-verbal cues to tailor its responses, while ElevenLabs generates natural voice output for a more immersive interaction.",
-      tags: ["Web", "Psyc", "AI", "Hackathon"],
+      tags: ["Web", "Psyc", "AI", "Hackathon", "Live"],
       tech: ["python", "programing"],
       collab: ["Charan", "Clark", "Quang"],
       show: "luxbot.png",
+      live: "online",
     },
     {
       url: "https://github.com/yadav412/CSSS_Fall_Hacks2025",
@@ -87,10 +98,11 @@ function ProjectPage({}) {
       title: "F1 Stocks ",
       description:
         "F1 Stock Match is a fast-paced hackathon project developed in under 9 hours. The goal of the project was to creatively combine real-world stock market data with the world of Formula 1 racing, generating an interactive experience where users can explore which teams are “performing” like specific stocks. ",
-      tags: ["Web", "Hackathon"],
+      tags: ["Web", "Hackathon", "Live"],
       tech: ["html-5", "js", "css-3"],
       collab: ["Charan", "Clark", "Quang"],
       show: "f1stocks.png",
+      live: "online",
     },
 
     {
@@ -108,7 +120,8 @@ function ProjectPage({}) {
       url: "#",
       web: "",
       title: "Neural decay and tech use- Research Study",
-      description: "This is my first project",
+      description:
+        "Research paper exploring the affect of social media on the decay of neural pathways and other grey matter areas. This paper is being developed in anticipation for the 2027 Advancement in Healthcare Technology and Biomedical Engineering conference. ",
       tags: ["Psyc", "Research"],
       tech: ["python", "pandas", "research"],
       collab: [""],
@@ -120,10 +133,11 @@ function ProjectPage({}) {
       title: "SFU Esports Discord Bot",
       description:
         "Developed a discord bot for the SFU esports association for the sole purpose of automating the ticketing process related to Event logistics. This project was trailed with 50+ users before being shelved due to organisations personal changes.",
-      tags: ["Extension"],
+      tags: ["Extension", "offline"],
       tech: ["discord", "js"],
       collab: [],
       show: "yomiru poster.png",
+      live: "no",
     },
 
     {
@@ -151,6 +165,19 @@ function ProjectPage({}) {
           Nervy Starts, Strategies and Redbull
         </h1>
       </span>
+
+      <span
+        className="callingcardcontainter"
+        style={{ textAlign: "center", alignItems: "center" }}
+      >
+        <p
+          className="callingcard2"
+          style={{ textAlign: "center", alignItems: "center" }}
+        >
+          I love building and researching cool stuff
+        </p>
+      </span>
+
       <p
         className="title"
         style={{ textAlign: "center", alignItems: "center" }}

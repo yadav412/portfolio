@@ -567,6 +567,16 @@ p{
   width: auto;
 }
 
+.callingcard2{
+  font-family:'Times New Roman', Times, serif;
+
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 auto;
+  width: auto;
+}
+
 .callingcardcontainter {
   display: flex;
   justify-content: center;
@@ -584,4 +594,31 @@ p{
   margin: 0.2rem 0.4rem 0.2rem 0;
   font-family: 'Times New Roman', Times, serif;
   color: #1a1a1a;
+}
+
+.opening{
+  background-color: #3589521d;
+  padding: 50px;
+  animation: forwards;
+  
+}
+.name{
+  font-family: 'Times New Roman', Times, serif;
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0 auto;
+  width: auto;
+}
+
+.card{
+  font-family: 'Times New Roman', Times, serif;
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0 auto;
+  width: auto;
+  background-color: #00000000;
 }
