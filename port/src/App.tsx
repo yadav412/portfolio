@@ -4,6 +4,7 @@ import ProjectPage from "./components/projects";
 import Footer from "./components/Footer";
 import Githubstats from "./components/Githubstats";
 import Chatbot from "./components/Chatbot";
+import Hackathons from "./components/Hackathons";
 
 function Home() {
   return (
@@ -25,6 +26,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<ProjectPage />} />
+        <Route path="/hackathons" element={<Hackathons></Hackathons>} />
+        <Route path="/experience" element={<Hackathons></Hackathons>} />
+        <Route path="/SFU" element={<Hackathons></Hackathons>} />
+        <Route path="/hackathons" element={<Hackathons></Hackathons>} />
       </Routes>
     </BrowserRouter>
   );

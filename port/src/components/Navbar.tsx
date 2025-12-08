@@ -12,12 +12,35 @@ function MyNavbar() {
             <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/projects">
-              Projects
-            </Nav.Link>
+
             <Nav.Link as={Link} to="/experience">
               Experience
             </Nav.Link>
+
+            <NavDropdown
+              title="Projects"
+              id="basic-nav-dropdown"
+              className="Organizations"
+            >
+              <NavDropdown.Item as={Link} to="/Hackathons">
+                Hackathons
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Simon Fraser University
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+                SFU Esports
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">Research</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.5">
+                Medpack Technologies
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} to="/projects">
+                Everything
+              </NavDropdown.Item>
+            </NavDropdown>
             <NavDropdown
               title="Organizations"
               id="basic-nav-dropdown"
