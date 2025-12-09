@@ -34,7 +34,7 @@ function Thumbnail({
   );
 }
 
-function Hackathons({}) {
+function SFU({}) {
   // import all assets from ../assets as URLs so Vite bundles them for production
   const assets: Record<string, string> = import.meta.glob(
     "../assets/*.{png,jpg,jpeg,svg,webp}",
@@ -57,50 +57,28 @@ function Hackathons({}) {
 
   const projects = [
     {
-      url: "https://github.com/yadav412/LuxBot",
-      web: "",
-      title: "Luxbot ",
+      url: "https://github.com/yadav412/yomiru",
+      web: "http://yomiru.netlify.app/",
+      title: "Yomiru ",
       description:
-        "An AI-powered wellness assistant that uses computer vision, Gemini API calls, and ElevenLabs voice playback to create a responsive, real-time conversational experience. It interprets facial expressions and non-verbal cues to tailor its responses, while ElevenLabs generates natural voice output for a more immersive interaction.",
-      tags: ["Web", "Psyc", "AI", "Hackathon", "Live"],
-      tech: ["python", "programing"],
-      collab: ["Charan", "Clark", "Quang"],
-      show: "luxbot.png",
-      live: "online",
-    },
-    {
-      url: "https://github.com/yadav412/CSSS_Fall_Hacks2025",
-      web: "f1stocks.netlify.app/index.html",
-      title: "F1 Stocks ",
-      description:
-        "F1 Stock Match is a fast-paced hackathon project developed in under 9 hours. The goal of the project was to creatively combine real-world stock market data with the world of Formula 1 racing, generating an interactive experience where users can explore which teams are “performing” like specific stocks. ",
-      tags: ["Web", "Hackathon", "Live"],
+        "Along with 3 other team members, built a web application tailored to users who love exploring new anime. Yomiru provides users with anime suggestions that tailor to their interests so they can explore new series. ",
+      tags: ["Web", "SDLC", "Live"],
       tech: ["html-5", "js", "css-3"],
-      collab: ["Charan", "Clark", "Quang"],
-      show: "f1stocks.png",
+      collab: ["karan", "eric", "jassie"],
+      show: "yomiru poster.png",
       live: "online",
     },
-
     {
       url: "#",
       web: "",
-      title: "Journey Hacks 2026 ",
-      description: " Warm Up lap number 2",
-      tags: ["", "", ""],
-      tech: ["typescript", "react"],
-      collab: ["Charan", "Clark", "Quang"],
-      show: "yomiru poster.png",
-    },
-
-    {
-      url: "#",
-      web: "",
-      title: "NwHacks 2026 ",
-      description: "MLH Number 2",
-      tags: ["", "", ""],
-      tech: ["typescript", "react"],
-      collab: ["Charan", "Clark", "Quang"],
-      show: "yomiru poster.png",
+      title: "Portfolio Site ",
+      description:
+        "Personal portfolio site that is a reflection of my current web development skills.\n Version one : This was my first time using both HTML and CSS it was really unpolished.(2024) \n Version two : This is the current version of my personal website, it is a lot more polished and has a lot more features.(2025)",
+      tags: ["Web", "Live"],
+      tech: ["typescript", "programing", "java", "SpringBoot"],
+      collab: [],
+      show: "portfolio.png",
+      live: "online",
     },
   ];
 
@@ -221,9 +199,8 @@ function Hackathons({}) {
           </div>
         </div>
       ))}
-      <Chatbot></Chatbot>
     </div>
   );
 }
 
-export default Hackathons;
+export default SFU;

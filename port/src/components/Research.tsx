@@ -34,7 +34,7 @@ function Thumbnail({
   );
 }
 
-function Hackathons({}) {
+function Research({}) {
   // import all assets from ../assets as URLs so Vite bundles them for production
   const assets: Record<string, string> = import.meta.glob(
     "../assets/*.{png,jpg,jpeg,svg,webp}",
@@ -57,50 +57,26 @@ function Hackathons({}) {
 
   const projects = [
     {
-      url: "https://github.com/yadav412/LuxBot",
+      url: "https://github.com/yadav412/psyc-data-analysis",
       web: "",
-      title: "Luxbot ",
+      title: "Effect of Social Media on Mood - Research Study ",
       description:
-        "An AI-powered wellness assistant that uses computer vision, Gemini API calls, and ElevenLabs voice playback to create a responsive, real-time conversational experience. It interprets facial expressions and non-verbal cues to tailor its responses, while ElevenLabs generates natural voice output for a more immersive interaction.",
-      tags: ["Web", "Psyc", "AI", "Hackathon", "Live"],
-      tech: ["python", "programing"],
-      collab: ["Charan", "Clark", "Quang"],
-      show: "luxbot.png",
-      live: "online",
+        " Designed and executed an experimental study on emotional valence in social media content using PANAS to assess mood changes. Conducted statistical analysis using Python scripting; produced a formal APA-style lab report using data processed through a custom Python script increasing result accuracy. ",
+      tags: ["Psyc", "Research", "Data Analysis"],
+      tech: ["python", "pandas", "research"],
+      collab: [],
+      show: "mood.png",
     },
     {
       url: "https://github.com/yadav412/CSSS_Fall_Hacks2025",
-      web: "f1stocks.netlify.app/index.html",
-      title: "F1 Stocks ",
+      web: "",
+      title: "Neural decay and tech use- Research Study",
       description:
-        "F1 Stock Match is a fast-paced hackathon project developed in under 9 hours. The goal of the project was to creatively combine real-world stock market data with the world of Formula 1 racing, generating an interactive experience where users can explore which teams are “performing” like specific stocks. ",
-      tags: ["Web", "Hackathon", "Live"],
-      tech: ["html-5", "js", "css-3"],
-      collab: ["Charan", "Clark", "Quang"],
-      show: "f1stocks.png",
-      live: "online",
-    },
-
-    {
-      url: "#",
-      web: "",
-      title: "Journey Hacks 2026 ",
-      description: " Warm Up lap number 2",
-      tags: ["", "", ""],
-      tech: ["typescript", "react"],
-      collab: ["Charan", "Clark", "Quang"],
-      show: "yomiru poster.png",
-    },
-
-    {
-      url: "#",
-      web: "",
-      title: "NwHacks 2026 ",
-      description: "MLH Number 2",
-      tags: ["", "", ""],
-      tech: ["typescript", "react"],
-      collab: ["Charan", "Clark", "Quang"],
-      show: "yomiru poster.png",
+        "Research paper exploring the affect of social media developed in under 9 hours. The goal of the project was to creatively combine real-world stock market data with the world of Formula 1 racing, generating an interactive experience where users can explore which teams are “performing” like specific stocks. ",
+      tags: ["Psyc", "Research"],
+      tech: ["python", "pandas", "research"],
+      collab: [""],
+      show: "brain.png",
     },
   ];
 
@@ -226,4 +202,4 @@ function Hackathons({}) {
   );
 }
 
-export default Hackathons;
+export default Research;

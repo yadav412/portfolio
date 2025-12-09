@@ -34,7 +34,7 @@ function Thumbnail({
   );
 }
 
-function Hackathons({}) {
+function Esports({}) {
   // import all assets from ../assets as URLs so Vite bundles them for production
   const assets: Record<string, string> = import.meta.glob(
     "../assets/*.{png,jpg,jpeg,svg,webp}",
@@ -57,50 +57,16 @@ function Hackathons({}) {
 
   const projects = [
     {
-      url: "https://github.com/yadav412/LuxBot",
-      web: "",
-      title: "Luxbot ",
-      description:
-        "An AI-powered wellness assistant that uses computer vision, Gemini API calls, and ElevenLabs voice playback to create a responsive, real-time conversational experience. It interprets facial expressions and non-verbal cues to tailor its responses, while ElevenLabs generates natural voice output for a more immersive interaction.",
-      tags: ["Web", "Psyc", "AI", "Hackathon", "Live"],
-      tech: ["python", "programing"],
-      collab: ["Charan", "Clark", "Quang"],
-      show: "luxbot.png",
-      live: "online",
-    },
-    {
-      url: "https://github.com/yadav412/CSSS_Fall_Hacks2025",
-      web: "f1stocks.netlify.app/index.html",
-      title: "F1 Stocks ",
-      description:
-        "F1 Stock Match is a fast-paced hackathon project developed in under 9 hours. The goal of the project was to creatively combine real-world stock market data with the world of Formula 1 racing, generating an interactive experience where users can explore which teams are “performing” like specific stocks. ",
-      tags: ["Web", "Hackathon", "Live"],
-      tech: ["html-5", "js", "css-3"],
-      collab: ["Charan", "Clark", "Quang"],
-      show: "f1stocks.png",
-      live: "online",
-    },
-
-    {
       url: "#",
       web: "",
-      title: "Journey Hacks 2026 ",
-      description: " Warm Up lap number 2",
-      tags: ["", "", ""],
-      tech: ["typescript", "react"],
-      collab: ["Charan", "Clark", "Quang"],
+      title: "SFU Esports Discord Bot",
+      description:
+        "Developed a discord bot for the SFU esports association for the sole purpose of automating the ticketing process related to Event logistics. This project was trailed with 50+ users before being shelved due to organisations personal changes.",
+      tags: ["Extension", "offline"],
+      tech: ["discord", "js"],
+      collab: [],
       show: "yomiru poster.png",
-    },
-
-    {
-      url: "#",
-      web: "",
-      title: "NwHacks 2026 ",
-      description: "MLH Number 2",
-      tags: ["", "", ""],
-      tech: ["typescript", "react"],
-      collab: ["Charan", "Clark", "Quang"],
-      show: "yomiru poster.png",
+      live: "no",
     },
   ];
 
@@ -226,4 +192,4 @@ function Hackathons({}) {
   );
 }
 
-export default Hackathons;
+export default Esports;

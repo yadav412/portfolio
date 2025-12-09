@@ -5,13 +5,18 @@ import Footer from "./components/Footer";
 import Githubstats from "./components/Githubstats";
 import Chatbot from "./components/Chatbot";
 import Hackathons from "./components/Hackathons";
+import Esports from "./components/Esports";
+import Research from "./components/Research";
+import SFU from "./components/SFU";
 
 function Home() {
   return (
-    <div className="home">
-      <div className="opening">
-        <h1 className="callingcard">Yadav Singh</h1>
-        <p className="callingcard">The South African Med Tech Guy</p>
+    <div className="head">
+      <div className="home">
+        <div className="opening">
+          <h1 className="callingcard">Yadav Singh</h1>
+          <p className="callingcard">The South African Med Tech Guy</p>
+        </div>
       </div>
       <Chatbot></Chatbot>
       <Footer></Footer>
@@ -28,8 +33,9 @@ function App() {
         <Route path="/projects" element={<ProjectPage />} />
         <Route path="/hackathons" element={<Hackathons></Hackathons>} />
         <Route path="/experience" element={<Hackathons></Hackathons>} />
-        <Route path="/SFU" element={<Hackathons></Hackathons>} />
-        <Route path="/hackathons" element={<Hackathons></Hackathons>} />
+        <Route path="/SFU" element={<SFU></SFU>} />
+        <Route path="/Esports" element={<Esports></Esports>} />
+        <Route path="/Research" element={<Research></Research>} />
       </Routes>
     </BrowserRouter>
   );

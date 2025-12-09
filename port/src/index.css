@@ -106,6 +106,9 @@ button:focus-visible {
 /* Stronger selectors to override Bootstrap defaults (Bootstrap loads after this file) */
 .navbar.bg-body-tertiary{
   background: #3d5b2c !important;
+  
+  border: 1px solid #c2c0c0e7;
+
 }
 .navbar.bg-body-tertiary .nav-link{
   color: #000000 !important;
@@ -548,16 +551,42 @@ p{
   color: #000;
 }
 
-.home{
+
+.home {
+  position: relative;
   width: 100%;
-  max-width: none;
   margin: 0;
   padding: 1.25rem 1.5rem;
-  background-color: #000000c4;
+  color: #000000;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* This layer is the faded background image */
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/snter.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1; /* ← adjust transparency here */
+  z-index: -1;  /* behind content */
+  filter: blur(1px) brightness(0.4); 
 }
 
 
+@media (max-width: 2000px) {
+  .home::before {
+    background-size: cover;   
+    background-color: black;    /* fills empty gaps */
+    background-position: center top; /* better framing */
+    filter: brightness(0.4);    
+  }
+}
+
 .callingcard {
+
   font-family: 'Times New Roman', Times, serif;
   display: block;
   text-align: center;
@@ -565,6 +594,7 @@ p{
   font-weight: bold;
   margin: 0 auto;
   width: auto;
+  z-index: 1;
 }
 
 .callingcard2{
@@ -575,6 +605,8 @@ p{
   color: #ffffff;
   margin: 0 auto;
   width: auto;
+  z-index: 1;
+
 }
 
 .callingcardcontainter {
@@ -583,6 +615,7 @@ p{
   align-items: center;
   width: 100%;
   grid-column: 1 / -1;
+  z-index: 1;
 }
 
 .tag {
@@ -605,6 +638,7 @@ p{
   border-radius: 50%; 
   padding: 50px;
   animation: forwards;
+  z-index: 1;
   
 }
 .name{
@@ -615,6 +649,7 @@ p{
   font-weight: bold;
   margin: 0 auto;
   width: auto;
+  z-index: 1;
 }
 
 .card{
@@ -626,4 +661,5 @@ p{
   margin: 0 auto;
   width: auto;
   background-color: #00000000;
+  z-index: 1;
 }
