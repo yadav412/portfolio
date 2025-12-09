@@ -588,9 +588,10 @@ p{
 .callingcard {
 
   font-family: 'Times New Roman', Times, serif;
+  text-shadow: solid 1px black;
   display: block;
   text-align: center;
-  color: #ffffff;
+  color: #2dce22;
   font-weight: bold;
   margin: 0 auto;
   width: auto;
