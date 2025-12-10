@@ -688,14 +688,27 @@ p{
 .callingcard {
 
   font-family:'Times New Roman', Times, serif;
-  text-shadow: solid 1px black;
+  text-shadow: 
+    /* Outline effect - 8 directions */
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    0 -1px 0 #000,
+    0 1px 0 #000,
+    -1px 0 0 #000,
+    1px 0 0 #000,
+    /* Faint glow effect */
+    0 0 10px rgba(132, 252, 95, 0.5),
+    0 0 20px rgba(132, 252, 95, 0.3),
+    0 0 30px rgba(132, 252, 95, 0.2);
   display: block; 
   text-align: center;
-  color: #11ff00;
+  color: #84fc5f;
   font-weight: bold;
   margin: 0 auto;
   width: auto;
-  z-index: 1;
+  z-index: 1; 
 }
 
 .callingcard2{
