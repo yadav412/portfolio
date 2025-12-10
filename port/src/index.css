@@ -107,8 +107,6 @@ button:focus-visible {
 .navbar.bg-body-tertiary{
   background: #253d17ef !important;
   
-  border: 1px solid #c2c0c0e7;
-
 }
 .navbar.bg-body-tertiary .nav-link{
   color: #000000 !important;
@@ -669,12 +667,27 @@ p{
 }
 
 
+.head {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .bod{
   background-color: #161e17;
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 2rem;
+  flex: 1;
+  width: 100%;
 }
+
+.about{
+  flex: 1;
+  width: 100%;
+  min-height: 100%;
+}
+
 
 .bod .chatbot-container {
   margin-top: 0;

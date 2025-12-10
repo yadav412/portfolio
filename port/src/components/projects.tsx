@@ -269,7 +269,6 @@ function ProjectPage({}) {
           </div>
         </div>
       ))}
-      <Chatbot></Chatbot>
     </div>
   );
 }

@@ -221,7 +221,6 @@ function Hackathons({}) {
           </div>
         </div>
       ))}
-      <Chatbot></Chatbot>
     </div>
   );
 }

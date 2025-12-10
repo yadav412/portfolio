@@ -197,7 +197,6 @@ function Research({}) {
           </div>
         </div>
       ))}
-      <Chatbot></Chatbot>
     </div>
   );
 }

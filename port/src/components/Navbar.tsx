@@ -1,7 +1,21 @@
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 function MyNavbar() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (path: string, e?: React.MouseEvent) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    console.log('Current location:', location.pathname);
+    console.log('Navigating to:', path);
+    navigate(path);
+    console.log('After navigate, location should be:', path);
+  };
+
   return (
     <Navbar expand="lg" className={`bg-body-tertiary `}>
       <Container className="nav">
@@ -9,9 +23,7 @@ function MyNavbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">
-              Home
-            </Nav.Link>
+            <Nav.Link onClick={(e) => { e.preventDefault(); handleNavClick("/", e); }}>Home</Nav.Link>
             <Nav.Link as={Link} to="/experience">
               Experience
             </Nav.Link>
@@ -20,25 +32,35 @@ function MyNavbar() {
               id="basic-nav-dropdown"
               className="Organizations"
             >
-              <NavDropdown.Item as={Link} to="/Hackathons">
-                Hackathons
+              <NavDropdown.Item>
+                <Link to="/Hackathons" style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%' }}>
+                  Hackathons
+                </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/SFU">
-                Simon Fraser University
+              <NavDropdown.Item>
+                <Link to="/SFU" style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%' }}>
+                  Simon Fraser University
+                </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/Esports">
-                SFU Esports
+              <NavDropdown.Item>
+                <Link to="/Esports" style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%' }}>
+                  SFU Esports
+                </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/Research">
-                Research
+              <NavDropdown.Item>
+                <Link to="/Research" style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%' }}>
+                  Research
+                </Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.5">
                 Medpack Technologies
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/projects">
-                Everything
+              <NavDropdown.Item>
+                <Link to="/projects" style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%' }}>
+                  Everything
+                </Link>
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown

@@ -51,10 +51,10 @@ function Chatbot() {
 
     try {
       // Use proxy in development, or full URL in production
-      const apiUrl = import.meta.env.DEV 
-        ? "/api/chat" 
+      const apiUrl = import.meta.env.DEV
+        ? "/api/chat"
         : "http://localhost:8080/api/chat";
-      
+
       const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
@@ -98,14 +98,20 @@ function Chatbot() {
   return (
     <div className="chatbot-container">
       <div className="chatbot-header">
-        <img className="chatbot-logo" src={getAsset("yomi.webp")} alt="Yomi Chatbot" />
+        <img
+          className="chatbot-logo"
+          src={getAsset("yomi.webp")}
+          alt="Yomi Chatbot"
+        />
         <h3>Yomi Chatbot</h3>
       </div>
       <div className="chatbot-messages">
         {messages.map((message, index) => (
           <div
             key={index}
-            className={`message ${message.sender === "user" ? "user-message" : "bot-message"}`}
+            className={`message ${
+              message.sender === "user" ? "user-message" : "bot-message"
+            }`}
           >
             <div className="message-content">{message.text}</div>
             <div className="message-time">

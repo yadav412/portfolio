@@ -187,7 +187,6 @@ function Esports({}) {
           </div>
         </div>
       ))}
-      <Chatbot></Chatbot>
     </div>
   );
 }
