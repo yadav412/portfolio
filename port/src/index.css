@@ -687,11 +687,11 @@ p{
 
 .callingcard {
 
-  font-family: 'Courier New', Courier, monospace;
+  font-family:'Times New Roman', Times, serif;
   text-shadow: solid 1px black;
-  display: block;
+  display: block; 
   text-align: center;
-  color: #2dce22;
+  color: #11ff00;
   font-weight: bold;
   margin: 0 auto;
   width: auto;
