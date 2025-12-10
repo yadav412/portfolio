@@ -335,12 +335,13 @@ p{
 /* Chatbot Styles */
 .chatbot-container {
   max-width: 800px;
-  margin: 2rem auto;
+  margin: 0 auto;
   background-color: #1a1a1a;
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
+  padding-top: 10px;
   height: 600px;
   overflow: hidden;
 }
@@ -556,7 +557,9 @@ p{
   position: relative;
   width: 100%;
   margin: 0;
-  padding: 1.25rem 1.5rem;
+  margin-bottom: 0;
+  padding: 1.25rem 1.5rem 0 1.5rem;
+  padding-bottom: 0;
   color: #000000;
   overflow: hidden;
   z-index: 0;
@@ -663,4 +666,17 @@ p{
   width: auto;
   background-color: #00000000;
   z-index: 1;
+}
+
+
+.bod{
+  background-color: #161e17;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 2rem;
+}
+
+.bod .chatbot-container {
+  margin-top: 0;
+  margin-bottom: 0;
 }

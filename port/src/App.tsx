@@ -18,7 +18,9 @@ function Home() {
           <p className="callingcard">The South African Med Tech Guy</p>
         </div>
       </div>
-      <Chatbot></Chatbot>
+      <div className="bod">
+        <Chatbot></Chatbot>
+      </div>
       <Footer></Footer>
     </div>
   );
