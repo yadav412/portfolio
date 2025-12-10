@@ -105,7 +105,7 @@ button:focus-visible {
 
 /* Stronger selectors to override Bootstrap defaults (Bootstrap loads after this file) */
 .navbar.bg-body-tertiary{
-  background: #3d5b2c !important;
+  background: #253d17ef !important;
   
   border: 1px solid #c2c0c0e7;
 
