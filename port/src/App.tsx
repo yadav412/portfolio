@@ -22,6 +22,7 @@ function App() {
         <Route path="/Esports" element={<Esports />} />
         <Route path="/Research" element={<Research />} />
       </Routes>
+      <Chatbot />
     </BrowserRouter>
   );
 }

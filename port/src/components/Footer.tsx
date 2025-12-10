@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <footer>
-      <p className="UX">end</p>
+    <footer className="foot">
+      <p className="UX">Copy Right</p>
     </footer>
   );
 }

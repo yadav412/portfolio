@@ -7,6 +7,7 @@ interface Message {
 }
 
 function Chatbot() {
+  const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       text: "Hello! I'm Yomi, your AI assistant. How can I help you today?",
@@ -96,60 +97,119 @@ function Chatbot() {
   };
 
   return (
-    <div className="chatbot-container">
-      <div className="chatbot-header">
-        <img
-          className="chatbot-logo"
-          src={getAsset("yomi.webp")}
-          alt="Yomi Chatbot"
-        />
-        <h3>Yomi Chatbot</h3>
-      </div>
-      <div className="chatbot-messages">
-        {messages.map((message, index) => (
-          <div
-            key={index}
-            className={`message ${
-              message.sender === "user" ? "user-message" : "bot-message"
-            }`}
+    <>
+      {/* Floating Chat Button */}
+      <button
+        className="chatbot-toggle-button"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle chatbot"
+      >
+        {isOpen ? (
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <div className="message-content">{message.text}</div>
-            <div className="message-time">
-              {message.timestamp.toLocaleTimeString([], {
-                hour: "2-digit",
-                minute: "2-digit",
-              })}
-            </div>
-          </div>
-        ))}
-        {isLoading && (
-          <div className="message bot-message">
-            <div className="message-content">
-              <span className="typing-indicator">Yomi is typing...</span>
-            </div>
-          </div>
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        ) : (
+          <img
+            className="chatbot-toggle-icon"
+            src={getAsset("yomi.webp")}
+            alt="Yomi Chatbot"
+          />
         )}
-        <div ref={messagesEndRef} />
-      </div>
-      <div className="chatbot-input-container">
-        <input
-          type="text"
-          className="chatbot-input"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyPress={handleKeyPress}
-          placeholder="Type your message..."
-          disabled={isLoading}
-        />
-        <button
-          className="chatbot-send-button"
-          onClick={sendMessage}
-          disabled={isLoading || !input.trim()}
-        >
-          Send
-        </button>
-      </div>
-    </div>
+      </button>
+
+      {/* Chat Window */}
+      {isOpen && (
+        <div className="chatbot-window">
+          <div className="chatbot-container">
+            <div className="chatbot-header">
+              <img
+                className="chatbot-logo"
+                src={getAsset("yomi.webp")}
+                alt="Yomi Chatbot"
+              />
+              <h3>Yomi Chatbot</h3>
+              <button
+                className="chatbot-close-button"
+                onClick={() => setIsOpen(false)}
+                aria-label="Close chatbot"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 6L6 18M6 6L18 18"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div className="chatbot-messages">
+              {messages.map((message, index) => (
+                <div
+                  key={index}
+                  className={`message ${
+                    message.sender === "user" ? "user-message" : "bot-message"
+                  }`}
+                >
+                  <div className="message-content">{message.text}</div>
+                  <div className="message-time">
+                    {message.timestamp.toLocaleTimeString([], {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    })}
+                  </div>
+                </div>
+              ))}
+              {isLoading && (
+                <div className="message bot-message">
+                  <div className="message-content">
+                    <span className="typing-indicator">Yomi is typing...</span>
+                  </div>
+                </div>
+              )}
+              <div ref={messagesEndRef} />
+            </div>
+            <div className="chatbot-input-container">
+              <input
+                type="text"
+                className="chatbot-input"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyPress={handleKeyPress}
+                placeholder="Type your message..."
+                disabled={isLoading}
+              />
+              <button
+                className="chatbot-send-button"
+                onClick={sendMessage}
+                disabled={isLoading || !input.trim()}
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
