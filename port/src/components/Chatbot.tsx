@@ -123,7 +123,7 @@ function Chatbot() {
         ) : (
           <img
             className="chatbot-toggle-icon"
-            src={getAsset("yomi.webp")}
+            src={getAsset("ChatGPT Image Dec 11, 2025, 03_14_42 PM.png")}
             alt="Yomi Chatbot"
           />
         )}

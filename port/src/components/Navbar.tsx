@@ -1,19 +1,11 @@
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function MyNavbar() {
   const navigate = useNavigate();
-  const location = useLocation();
 
-  const handleNavClick = (path: string, e?: React.MouseEvent) => {
-    if (e) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-    console.log('Current location:', location.pathname);
-    console.log('Navigating to:', path);
+  const handleNavClick = (path: string) => {
     navigate(path);
-    console.log('After navigate, location should be:', path);
   };
 
   return (
@@ -23,46 +15,39 @@ function MyNavbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link onClick={(e) => { e.preventDefault(); handleNavClick("/", e); }}>Home</Nav.Link>
+            <Nav.Link onClick={() => handleNavClick("/")}>Home</Nav.Link>
+            <NavDropdown.Divider />
             <Nav.Link as={Link} to="/experience">
               Experience
             </Nav.Link>
+            <NavDropdown.Divider />
             <NavDropdown
               title="Projects"
               id="basic-nav-dropdown"
               className="Organizations"
             >
-              <NavDropdown.Item>
-                <Link to="/Hackathons" style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%' }}>
-                  Hackathons
-                </Link>
+              <NavDropdown.Item onClick={() => handleNavClick("/Hackathons")}>
+                Hackathons
               </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Link to="/SFU" style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%' }}>
-                  Simon Fraser University
-                </Link>
+              <NavDropdown.Item onClick={() => handleNavClick("/SFU")}>
+                Simon Fraser University
               </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Link to="/Esports" style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%' }}>
-                  SFU Esports
-                </Link>
+              <NavDropdown.Item onClick={() => handleNavClick("/Esports")}>
+                SFU Esports
               </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Link to="/Research" style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%' }}>
-                  Research
-                </Link>
+              <NavDropdown.Item onClick={() => handleNavClick("/Research")}>
+                Research
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.5">
                 Medpack Technologies
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item>
-                <Link to="/projects" style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%' }}>
-                  Everything
-                </Link>
+              <NavDropdown.Item onClick={() => handleNavClick("/projects")}>
+                Everything
               </NavDropdown.Item>
             </NavDropdown>
+            <NavDropdown.Divider />
             <NavDropdown
               title="Organizations"
               id="basic-nav-dropdown"
