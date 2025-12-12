@@ -8,7 +8,17 @@ function Home() {
         <div className="opening"></div>
       </div>
       <div className="bod">
-        <h1 className="about"></h1>
+        <div className="About">
+          <h2 className="Name">Yadav Singh</h2>
+          <p>
+            Software Systems@ SFU | Technical Project Manager | Co-Founder@
+            Medpack
+          </p>
+          <p>Vancouver, BC</p>
+          <button>Contact me</button>
+          <p></p>
+          <button>Resume</button>
+        </div>
       </div>
       <Footer></Footer>
     </div>
