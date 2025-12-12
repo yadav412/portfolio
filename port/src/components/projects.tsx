@@ -143,11 +143,34 @@ function ProjectPage({}) {
     {
       url: "#",
       web: "",
-      title: "Portfolio Site ",
-      description: "This is my first project",
+      title: "AI research poster",
+      description:
+        "Produced an AI research poster for the Canadian AI 2026 conference.",
+      tags: ["Research", "AI"],
+      tech: ["python"],
+      collab: [""],
+      show: "yomiru poster.png",
+    },
+
+    {
+      url: "#",
+      web: "",
+      title: "Journey Hacks 2026 ",
+      description: " Warm Up lap number 2",
       tags: ["", "", ""],
       tech: ["typescript", "react"],
-      collab: [""],
+      collab: ["Charan", "Clark", "Quang"],
+      show: "yomiru poster.png",
+    },
+
+    {
+      url: "#",
+      web: "",
+      title: "NwHacks 2026 ",
+      description: "MLH Number 2",
+      tags: ["", "", ""],
+      tech: ["typescript", "react"],
+      collab: ["Charan", "Clark", "Quang"],
       show: "yomiru poster.png",
     },
   ];
