@@ -666,11 +666,15 @@ p{
 .home::before {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url("assets/Hacking\ Computer\ Screen\ GIF\ -\ Hacking\ Computer\ Screen\ Green\ Screen\ -\ Discover\ &\ Share\ GIFs.gif");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100px;
+  background-position: center center;
+  background-attachment: local;
   opacity: 1; /* ← adjust transparency here */
   z-index: -1;  /* behind content */
   filter: blur(1px) brightness(0.7); 
@@ -681,16 +685,16 @@ p{
   .home::before {
     background-size: cover;   
     background-color: black;    /* fills empty gaps */
-    background-position: center top; /* better framing */
+    background-position: center center; /* better framing */
     filter: brightness(0.7);    
   }
 }
 
-@media (max-width: 100px) {
+@media (max-width: 768px) {
   .home::before {
     background-size: cover;   
     background-color: black;    /* fills empty gaps */
-    background-position: center top; /* better framing */
+    background-position: center center; /* better framing */
     filter: brightness(0.7);    
   }
 }
