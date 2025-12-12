@@ -15,9 +15,9 @@ function Home() {
             Medpack
           </p>
           <p>Vancouver, BC</p>
-          <button>Contact me</button>
+          <button className="buton">Contact me</button>
           <p></p>
-          <button>Resume</button>
+          <button className="buton">Resume</button>
         </div>
       </div>
       <Footer></Footer>
