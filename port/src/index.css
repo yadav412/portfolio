@@ -148,9 +148,13 @@ button:focus-visible {
   color: #212121;
 }
 
+.Brand{
+  background-image: url("assets/logo2.0.png");
+}
+
 /* Stronger selectors to override Bootstrap defaults (Bootstrap loads after this file) */
 .navbar.bg-body-tertiary{
-  background: #0b1d00ef !important;
+  background: #010b04d6 !important;
   
 }
 .navbar.bg-body-tertiary .nav-link{
@@ -900,17 +904,20 @@ p{
 
 .About{
   text-align: center;
-  padding-top: 40px;
+  padding-top: 55px;
   width: 70%;
   align-self: center;
 }
 
 .Name{
-  color: #fdfdfd;
-  font-family: 'Courier New', Courier, monospace;
+  color: #ffffff;
+  font-family:'Times New Roman', Times, serif;
+  font: x-large;
+  font:bold;
 }
 
 .buton{
   border-radius: 50px;
-  color: rgba(0, 0, 255, 0.158);
+  color: rgba(0, 0, 0, 0.861);
+  border-color: #01b410;
 }

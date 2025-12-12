@@ -9,12 +9,12 @@ function Home() {
       </div>
       <div className="bod">
         <div className="About">
-          <h2 className="Name">Yadav Singh</h2>
+          <h1 className="Name">Yadav Singh</h1>
           <p>
             Software Systems@ SFU | Technical Project Manager | Co-Founder@
             Medpack
           </p>
-          <p>Vancouver, BC</p>
+          <p>📍 Vancouver, BC</p>
           <button className="buton">Contact me</button>
           <p></p>
           <button className="buton">Resume</button>
